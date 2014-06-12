@@ -1,0 +1,66 @@
+/*=========================================
+=            Table of Contents            =
+=========================================*/
+
+// 01. Colors
+// 02. Typography
+// 03. Button
+
+/*-----  End of Table of Contents  ------*/
+
+
+/*==========  01 COLORS  ==========*/
+$pink  		  : #C67DB3;
+$blue  		  : #42A6BB;
+$green 		  : #C5C23F; 
+
+$dark-blue 	   : #052435;
+$darkest-blue  : #041e2c;
+$sidebar-color : #021119;
+
+$light-grey   : #f2f2f2;
+$mid-grey 	  : #e5e5e5;
+$text-grey 	  : #333;
+
+
+/*==========  02. Typography  ==========*/
+$open-sans : "Open Sans" , sans-serif;
+
+
+body {
+	font-size: 62.5%;
+}
+
+@mixin h2-survey-q {
+	font-family: "Lucida Grande", sans-serif;
+	font-size: 4rem;
+	text-transform: uppercase;
+}
+
+@mixin h2-artist-name {
+	font-family: "Lucida Grande", sans-serif;
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+
+/*==========  03. Button  ==========*/
+
+
+@mixin button {
+	width: 500px;
+	height: 100px;
+	text-align: center;
+	border: 0;
+	
+	a {
+		color: white;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: $open-sans;
+	} 
+
+	&:hover {
+		box-shadow: none;
+		width: 475px;
+	}
+}
