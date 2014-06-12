@@ -1,27 +1,39 @@
 /*=================================
 =            Home Page            =
 =================================*/
-.site-main.home {
-	background: $darkest-blue;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: -1;
-}
+// .site-main.home {
+// 	background: $darkest-blue;
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// 	z-index: -1;
+// }
 
 button.home {
-	@include button;
 	background: $blue;
-	margin: 50% auto;
+	margin: 0 auto;
 	display: block;
 	z-index: 100;
+	position: relative;
+	font-size: 6rem;
+	margin-top: 5%;
+	@include button;
+
+	&:hover {
+		background: darken($blue, 10%);
+	}
 }
 
 img.home-tent {
-	position: absolute;
-	top: 0;
+	margin: 0 auto;
+	display: block;
+	padding-left: 10%;
+	}
+
+article.home {
+	width: 100%;
 }
 
 /*-----  End of Home Page  ------*/
@@ -42,14 +54,23 @@ img.home-tent {
 .group-blog .byline {
 	display: inline;
 }
+
+article {
+	width: 33.33%;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
 	//margin: 1.5em 0 0;
 	position: relative;
-	width: 80%;
 	margin: 0 auto;
 }
+
+.entry-content.home {
+	width: 80%;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;

@@ -31,6 +31,17 @@ body {
 	font-size: 62.5%;
 }
 
+@mixin h1 {
+	font-family: "Lucida Grande", sans-serif;
+	font-size: 10rem;
+	line-height: 7rem;
+	width: 75%;
+	margin: 0 auto;
+	text-transform: uppercase;
+	color: $green;
+	text-align: center;
+}
+
 @mixin h2-survey-q {
 	font-family: "Lucida Grande", sans-serif;
 	font-size: 4rem;
@@ -39,7 +50,7 @@ body {
 
 @mixin h2-artist-name {
 	font-family: "Lucida Grande", sans-serif;
-	font-size: 3rem;
+	font-size: 6rem;
 	text-transform: uppercase;
 }
 
@@ -51,16 +62,15 @@ body {
 	height: 100px;
 	text-align: center;
 	border: 0;
-	
-	a {
-		color: white;
-		text-transform: uppercase;
-		text-decoration: none;
-		font-family: $open-sans;
-	} 
+	color: white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: $open-sans; 
 
-	&:hover {
+	&:hover, &:focus {
 		box-shadow: none;
 		width: 475px;
+		outline: 0;
+		border: 0;
 	}
 }

@@ -8,10 +8,24 @@ textarea {
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
+	background: $dark-blue;
 }
+
+
+/*==========  Headings  ==========*/
+
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
+h1{
+	@include h1;
+}
+
+h2.entry-title {
+	@include h2-artist-name;
+}
+
 p {
 	margin-bottom: 1.5em;
 }

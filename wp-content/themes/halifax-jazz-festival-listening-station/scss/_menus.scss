@@ -13,8 +13,37 @@
 	position: relative;
 	display: block;
 }
+
+.main-navigation li.artists {
+	width: 100%;
+	background: url(images/artists-icon.png) no-repeat center;
+
+		&:hover, &:focus, &:active {
+			background: $mid-grey url(images/artists-icon.png) no-repeat center;
+		}
+	}
+
+.main-navigation li.artists.current-menu-item {
+	background: $mid-grey url(images/artists-icon.png) no-repeat center;
+}
+
+.main-navigation li.survey{
+	width: 100%;
+	background: url(images/survey-icon.png) no-repeat center;
+
+	&:hover, &:focus, &:active {
+			background: $mid-grey url(images/survey-icon-hover.png) no-repeat center;
+		}
+}
+
+.main-navigation li.survey.current-menu-item {
+	background: $mid-grey url(images/survey-icon-hover.png) no-repeat center;
+}
+
 .main-navigation a {
 	text-decoration: none;
+	padding: 50%;
+	display: block;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -46,6 +75,9 @@
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
+
+
+
 /* Small menu */
 .menu-toggle {
 	display: none;
