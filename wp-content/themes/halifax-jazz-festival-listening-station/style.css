@@ -174,10 +174,11 @@ h1 {
 h2.entry-title {
   font-family: "Lucida Grande", sans-serif;
   font-size: 6rem;
+  font-weight: normal;
   text-transform: uppercase; }
 
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5rem; }
 
 b, strong {
   font-weight: bold; }
@@ -412,9 +413,9 @@ button.home {
   text-align: center;
   border: 0;
   color: white;
-  text-transform: uppercase;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
+  font-size: 3.5rem;
   background: #42a6bb; }
   button.home:hover, button.home:focus {
     box-shadow: none;
@@ -422,6 +423,96 @@ button.home {
     outline: 0;
     border: 0; }
 
+/*=====================================
+=            Gravity Forms            =
+=====================================*/
+.gfield h2 {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 10rem;
+  line-height: 7rem;
+  width: 75%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #c5c23f;
+  margin: 0;
+  margin-bottom: 3%;
+  width: 100%; }
+.gfield p {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 3%;
+  border-bottom: 6px solid #42a6bb; }
+
+.gform_wrapper .gform_body .gform_page_footer {
+  border-top: 0; }
+.gform_wrapper .gform_body input[type="button"].gform_next_button {
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  border: 0;
+  color: white;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.5rem;
+  background: #c5c23f;
+  margin-top: 5%;
+  float: right;
+  content: url(images/right-arrow-icon.png); }
+  .gform_wrapper .gform_body input[type="button"].gform_next_button:hover, .gform_wrapper .gform_body input[type="button"].gform_next_button:focus {
+    box-shadow: none;
+    width: 475px;
+    outline: 0;
+    border: 0; }
+  .gform_wrapper .gform_body input[type="button"].gform_next_button:hover {
+    background: #a19e30; }
+.gform_wrapper .gform_body input[type="button"].gform_previous_button {
+  display: none; }
+.gform_wrapper .gform_body .dropdown .ginput_container {
+  position: relative; }
+  .gform_wrapper .gform_body .dropdown .ginput_container:after {
+    background: #42a6bb url(images/down-arrow-icon.png) center;
+    position: absolute;
+    width: 40px;
+    height: 40px; }
+.gform_wrapper .gform_body .top_label select.medium {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 33%;
+  margin: 5% 0;
+  float: left;
+  padding: 1%;
+  background: white;
+  border: 0;
+  font-size: 3rem;
+  border-radius: 0;
+  color: #42a6bb;
+  font-family: "Open Sans", sans-serif; }
+
+.gform_wrapper .top_label label.gfield_label {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 6rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #c5c23f;
+  font-weight: normal;
+  margin-bottom: 2.5%; }
+
+.gfield_radio li {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: white;
+  font-family: "Open Sans", sans-serif; }
+
+.gform_wrapper ul li.gfield {
+  margin-top: 5%; }
+
+.gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+  background: #041e2c; }
+
+/*-----  End of Gravity Forms  ------*/
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
@@ -461,11 +552,49 @@ a:active {
 .main-navigation li.artists {
   width: 100%;
   background: url(images/artists-icon.png) no-repeat center; }
-  .main-navigation li.artists:hover, .main-navigation li.artists:focus, .main-navigation li.artists:active {
+  .main-navigation li.artists:hover, .main-navigation li.artists:focus {
     background: #e5e5e5 url(images/artists-icon.png) no-repeat center; }
+    .main-navigation li.artists:hover:after, .main-navigation li.artists:hover:before, .main-navigation li.artists:focus:after, .main-navigation li.artists:focus:before {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+    .main-navigation li.artists:hover:after, .main-navigation li.artists:focus:after {
+      border-color: rgba(229, 229, 229, 0);
+      border-left-color: #e5e5e5;
+      border-width: 30px;
+      margin-top: -30px; }
+    .main-navigation li.artists:hover:before, .main-navigation li.artists:focus:before {
+      border-color: rgba(229, 229, 229, 0);
+      border-left-color: #e5e5e5;
+      border-width: 36px;
+      margin-top: -36px; }
 
-.main-navigation li.artists.current-menu-item {
+.main-navigation li.current-menu-item {
   background: #e5e5e5 url(images/artists-icon.png) no-repeat center; }
+  .main-navigation li.current-menu-item:after, .main-navigation li.current-menu-item:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .main-navigation li.current-menu-item:after {
+    border-color: rgba(229, 229, 229, 0);
+    border-left-color: #e5e5e5;
+    border-width: 30px;
+    margin-top: -30px; }
+  .main-navigation li.current-menu-item:before {
+    border-color: rgba(229, 229, 229, 0);
+    border-left-color: #e5e5e5;
+    border-width: 36px;
+    margin-top: -36px; }
 
 .main-navigation li.survey {
   width: 100%;
@@ -479,7 +608,8 @@ a:active {
 .main-navigation a {
   text-decoration: none;
   padding: 50%;
-  display: block; }
+  display: block;
+  font-size: 0; }
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -764,14 +894,15 @@ button.home {
   position: relative;
   font-size: 6rem;
   margin-top: 5%;
+  text-transform: uppercase;
   width: 500px;
   height: 100px;
   text-align: center;
   border: 0;
   color: white;
-  text-transform: uppercase;
   text-decoration: none;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.5rem; }
   button.home:hover, button.home:focus {
     box-shadow: none;
     width: 475px;
@@ -789,6 +920,16 @@ article.home {
   width: 100%; }
 
 /*-----  End of Home Page  ------*/
+/*==============================
+=            Survey            =
+==============================*/
+.entry-content.survey {
+  padding: 5% 10%; }
+
+article.page {
+  width: 100%; }
+
+/*-----  End of Survey  ------*/
 .hentry {
   margin: 0 0 1.5em; }
 

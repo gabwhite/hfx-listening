@@ -1,15 +1,6 @@
 /*=================================
 =            Home Page            =
 =================================*/
-// .site-main.home {
-// 	background: $darkest-blue;
-// 	position: absolute;
-// 	top: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-// 	z-index: -1;
-// }
 
 button.home {
 	background: $blue;
@@ -19,6 +10,7 @@ button.home {
 	position: relative;
 	font-size: 6rem;
 	margin-top: 5%;
+	text-transform: uppercase;
 	@include button;
 
 	&:hover {
@@ -38,6 +30,20 @@ article.home {
 
 /*-----  End of Home Page  ------*/
 
+
+/*==============================
+=            Survey            =
+==============================*/
+
+.entry-content.survey{
+	padding: 5% 10%;
+}
+
+article.page {
+	width: 100%;
+}
+
+/*-----  End of Survey  ------*/
 
 
 

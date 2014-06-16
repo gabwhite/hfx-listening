@@ -8,9 +8,6 @@
 	<header class="entry-header">
 		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
-		<div class="entry-meta">
-			<?php halifax_jazz_festival_listening_station_posted_on(); ?>
-		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

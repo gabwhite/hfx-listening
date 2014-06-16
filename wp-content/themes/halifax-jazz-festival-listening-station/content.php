@@ -8,11 +8,6 @@
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title">'), '</a></h2>' ); ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php halifax_jazz_festival_listening_station_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
