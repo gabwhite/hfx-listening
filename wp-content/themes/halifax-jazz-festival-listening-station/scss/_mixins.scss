@@ -40,18 +40,19 @@ body {
 	margin: 0 auto;
 	text-transform: uppercase;
 	color: $green;
+	font-style: normal;
 }
 
 @mixin h2-artist-name {
 	font-family: "Lucida Grande", sans-serif;
-	font-size: 6rem;
+	font-size: 7rem;
 	font-weight: normal;
 	text-transform: uppercase;
 }
 
 @mixin p {
-	font-size: 3rem;
-	line-height: 3.5rem;
+	font-size: 4rem;
+	line-height: 4rem;
 	color: white;
 	font-family: $open-sans;
 }

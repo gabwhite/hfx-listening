@@ -16,7 +16,7 @@
 
 .main-navigation li.artists {
 	width: 100%;
-	background: url(images/artists-icon.png) no-repeat center;
+	background: $sidebar-color url(images/artists-icon.png) no-repeat center;
 
 		&:hover, &:focus{
 			background: $mid-grey url(images/artists-icon.png) no-repeat center;

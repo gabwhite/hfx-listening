@@ -101,8 +101,8 @@ button.home {
 =            Gravity Forms            =
 =====================================*/
 
-.gfield{
-	h2 {
+.gfield{ //Question headings and options text
+	h2, h3 {
 		@include h1;
 		margin: 0;
 		margin-bottom: 3%;
@@ -116,11 +116,33 @@ button.home {
 	}
 }
 
+//mandatory field highlighting & validation errors: 
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+	background: $darkest-blue;
+	border:  1px solid $green;
+}
+
+.gform_wrapper.gform_validation_error div.validation_error {
+	color: white;
+}
+
+.gform_wrapper .gfield_description.validation_message {
+	color: white;
+} 
+
+label.gfield_label span.gfield_required {
+	color: white;
+}
+
 
 .gform_wrapper .gform_body{
 	.gform_page_footer{
 		border-top: 0;
 	}
+
+/*==========  Survey Previous and Next Styling  ==========*/
+
 
 	input[type="button"].gform_next_button {
 		@include button;
@@ -133,9 +155,20 @@ button.home {
 		}
 	}
 
+	input[type="button"]#gform_next_button_1_15{
+		background: $blue;
+
+		&:hover {
+			background: darken($blue, 10%);
+		}
+	}
+
 	input[type="button"].gform_previous_button {
 		display: none;
 	}
+
+
+/*==========  Dropdown Style  ==========*/
 
 	.dropdown .ginput_container{
 		position: relative;
@@ -147,7 +180,7 @@ button.home {
 			height: 40px;
 		}
 	}
-
+	
 	.top_label select.medium {
 		-webkit-appearance: none;
         -moz-appearance: none;
@@ -164,6 +197,8 @@ button.home {
 		font-family: $open-sans;
 	}
 }
+
+/*==========  Survey Question Styles  ==========*/
 
 .gform_wrapper .top_label label.gfield_label  {
 	@include h2-artist-name;
@@ -183,6 +218,87 @@ button.home {
 .gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
 	background: $darkest-blue;
 }
+
+
+/*==========  Radio Button Styling  ==========*/
+
+input[type="radio"]{
+	display:none;
+}
+
+.gfield_radio label {
+		display: inline-block;
+		background: url(images/radio-button.png)-45px no-repeat;
+		text-indent: 80px;
+		cursor: pointer;
+	}
+
+	input[type="radio"]:checked+label{
+			background: url(images/radio-button-checked.png)-45px no-repeat;
+		}
+
+/*==========  Likert Styling  ==========*/
+	.custom-likert table.gsurvey-likert {
+		border-bottom: 0;
+		margin-left: -2%;
+	}
+
+	.custom-likert .gsurvey-likert-choice-label{
+		padding-bottom: 1%;
+	}
+	
+	.custom-likert table.gsurvey-likert tr td{
+		border: 0;
+	}
+
+	.custom-likert table.gsurvey-likert tr td:first-child{
+		border-left: 0;
+	}
+
+	.custom-likert table.gsurvey-likert td.gsurvey-likert-choice-label{
+			background: none;
+	}
+
+	.custom-likert table.gsurvey-likert {
+		td.gsurvey-likert-choice {
+			background: url(images/radio-button-sprite.png) no-repeat center -90px;
+			height: 60px;
+
+			&:hover {
+				background: $mid-grey-transp url(images/radio-button-sprite.png) no-repeat center -90px;
+			}
+		}
+	
+		td.gsurvey-likert-choice.gsurvey-likert-selected {
+			background: url(images/radio-button-sprite.png)no-repeat center -9px;
+		}
+	}
+
+/*==========  Input Style  ==========*/
+
+	.gform_wrapper input[type=text], .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper input[type=tel],.gform_wrapper .custom-input input[type=number], .gform_wrapper input[type=password]{
+	border: 4px solid $green;
+	padding: 0.5%;
+	@include p;
+	font-size: 4rem;
+}
+
+/*==========  Checkbox Styling  ==========*/
+
+input[type="checkbox"]{
+	display: none;
+}
+
+.gfield_checkbox label {
+		display: inline-block;
+		background: url(images/checkbox-button-sprite.png)-45px -90px no-repeat;
+		text-indent: 80px;
+		cursor: pointer;
+	}
+
+	input[type="checkbox"]:checked+label{
+			background: url(images/checkbox-button-sprite.png)-45px -9px no-repeat;
+		}
 
 /*-----  End of Gravity Forms  ------*/
 
