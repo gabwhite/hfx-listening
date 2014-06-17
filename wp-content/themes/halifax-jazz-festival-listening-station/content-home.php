@@ -15,7 +15,4 @@
 		<a href="http://localhost:8888/02-hfx-jazz/artists">
 		<button class="home">Start</button></a>
 	</div><!-- .entry-content -->
-	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'halifax-jazz-festival-listening-station' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

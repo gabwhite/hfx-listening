@@ -28,12 +28,13 @@ $text-grey 	     : #333;
 $open-sans : "Open Sans" , sans-serif;
 
 
+
 body {
 	font-size: 62.5%;
 }
 
 @mixin h1 {
-	font-family: "Lucida Grande", sans-serif;
+	font-family: "Dosis", sans-serif;
 	font-size: 10rem;
 	line-height: 7rem;
 	width: 75%;
@@ -44,14 +45,14 @@ body {
 }
 
 @mixin h2-artist-name {
-	font-family: "Lucida Grande", sans-serif;
+	font-family: "Dosis", sans-serif;
 	font-size: 7rem;
 	font-weight: normal;
 	text-transform: uppercase;
 }
 
 @mixin p {
-	font-size: 4rem;
+	font-size: 3.6rem;
 	line-height: 4rem;
 	color: white;
 	font-family: $open-sans;

@@ -3,8 +3,6 @@
 	float: right;
 }
 
-
-
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -45,3 +43,41 @@ table {
 th {
 	font-weight: bold;
 }
+
+/*====================================
+=            Entry-Footer            =
+====================================*/
+.entry-footer {
+	position: absolute; 
+	padding: 0.5% 2%;
+	width: 30%;
+	bottom: 0;
+	background: $green;
+	border: 1px solid $blue;
+
+
+	.footer-icon { 
+		float: left;
+
+		img {
+			float: left;
+			display: inline-block;
+		}
+	}
+
+	.survey-link {
+		float: left;
+		display: inline-block;
+		@include p;
+		padding-top: 5%;
+	}
+
+	.survey-arrow {
+		float: right;
+		border-left: 2px dotted white;
+	}
+}
+
+
+
+/*-----  End of Entry-Footer  ------*/

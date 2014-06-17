@@ -92,6 +92,7 @@ add_action( 'widgets_init', 'halifax_jazz_festival_listening_station_widgets_ini
  * Enqueue scripts and styles.
  */
 function halifax_jazz_festival_listening_station_scripts() {
+	wp_enqueue_style("google-fonts", "http://fonts.googleapis.com/css?family=Dosis:300,400,500,700' rel='stylesheet");
 
 	wp_enqueue_style( 'halifax-jazz-festival-listening-station-style', get_stylesheet_uri() );
 

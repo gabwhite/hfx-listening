@@ -1,0 +1,16 @@
+/*==========  BUTTON STYLES  ==========*/
+button.home {
+	@include button;
+	background: $blue;
+	margin: 0 auto;
+	display: block;
+	z-index: 100;
+	position: relative;
+	font-size: 6rem;
+	margin-top: 5%;
+	text-transform: uppercase;
+
+	&:hover {
+		background: darken($blue, 10%);
+	}
+}

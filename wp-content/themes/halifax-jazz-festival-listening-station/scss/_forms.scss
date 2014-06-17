@@ -91,11 +91,6 @@ textarea {
 	width: 98%;
 }
 
-/*==========  BUTTON STYLES  ==========*/
-button.home {
-	@include button;
-	background: $blue;
-}
 
 /*=====================================
 =            Gravity Forms            =
@@ -186,7 +181,7 @@ label.gfield_label span.gfield_required {
         -moz-appearance: none;
         appearance: none;   
 		width: 33%;
-		margin: 5% 0;
+		margin: 1% 0 5% 0;
 		float: left;
 		padding: 1%;
 		background: white;
@@ -202,6 +197,7 @@ label.gfield_label span.gfield_required {
 
 .gform_wrapper .top_label label.gfield_label  {
 	@include h2-artist-name;
+	text-transform: none;
 	color: $green;
 	font-weight: normal;
 	margin-bottom: 2.5%;
@@ -228,13 +224,13 @@ input[type="radio"]{
 
 .gfield_radio label {
 		display: inline-block;
-		background: url(images/radio-button.png)-45px no-repeat;
+		background: url(images/radio-button-sprite.png)-45px -93px no-repeat;
 		text-indent: 80px;
 		cursor: pointer;
 	}
 
 	input[type="radio"]:checked+label{
-			background: url(images/radio-button-checked.png)-45px no-repeat;
+			background: url(images/radio-button-sprite.png)-45px -12px no-repeat;
 		}
 
 /*==========  Likert Styling  ==========*/
@@ -291,14 +287,32 @@ input[type="checkbox"]{
 
 .gfield_checkbox label {
 		display: inline-block;
-		background: url(images/checkbox-button-sprite.png)-45px -90px no-repeat;
+		background: url(images/checkbox-button-sprite.png)-45px -95px no-repeat;
 		text-indent: 80px;
 		cursor: pointer;
+
 	}
 
 	input[type="checkbox"]:checked+label{
-			background: url(images/checkbox-button-sprite.png)-45px -9px no-repeat;
+			background: url(images/checkbox-button-sprite.png)-45px -12px no-repeat;
 		}
+
+	.custom-input .gform_wrapper ul.gfield_checkbox li, 
+	.custom-input .gform_wrapper ul.gfield_radio li{
+		padding: 2% 0;
+	}
+
+/*==========  Submit Button  ==========*/
+
+input[type="submit"]{
+	@include button;
+	background: $blue;
+	box-shadow: none;
+
+	&:hover {
+		background: darken($blue, 10%);
+	}
+}
 
 /*-----  End of Gravity Forms  ------*/
 

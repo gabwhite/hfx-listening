@@ -5,54 +5,42 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title">'), '</a></h2>' ); ?>
+	<section id="article-container">
+		
+		<header class="entry-header">
+			<?php the_title( sprintf( '<h2 class="entry-title">'), '</a></h2>' ); ?>
 
-	</header><!-- .entry-header -->
+		</header><!-- .entry-header -->
 
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'halifax-jazz-festival-listening-station' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'halifax-jazz-festival-listening-station' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
+		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<div class="entry-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+		<?php else : ?>
+		<div class="entry-content artists">
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'halifax-jazz-festival-listening-station' ) ); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'halifax-jazz-festival-listening-station' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+		<?php endif; ?>
+	</section>	
 
 	<footer class="entry-footer">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'halifax-jazz-festival-listening-station' ) );
-				if ( $categories_list && halifax_jazz_festival_listening_station_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'halifax-jazz-festival-listening-station' ), $categories_list ); ?>
-			</span>
-			<?php endif; // End if categories ?>
 
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'halifax-jazz-festival-listening-station' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'halifax-jazz-festival-listening-station' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
+		<div class="footer-icon">
+			<img src=" <?php echo the_field("left_icon"); ?> " alt="Icon"> 
+		</div>
 
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'halifax-jazz-festival-listening-station' ), __( '1 Comment', 'halifax-jazz-festival-listening-station' ), __( '% Comments', 'halifax-jazz-festival-listening-station' ) ); ?></span>
-		<?php endif; ?>
+		<div class="survey-link">
+			<p><?php echo the_field("link"); ?></p>
+		</div>
 
-		<?php edit_post_link( __( 'Edit', 'halifax-jazz-festival-listening-station' ), '<span class="edit-link">', '</span>' ); ?>
+		<div class="survey-arrow">
+			<img src=" <?php echo the_field("right_icon"); ?> " alt="Arrow Icon">
+		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
