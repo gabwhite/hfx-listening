@@ -6,9 +6,8 @@ button.home {
 	display: block;
 	z-index: 100;
 	position: relative;
-	font-size: 6rem;
+	font-size: 3rem;
 	margin-top: 5%;
-	text-transform: uppercase;
 
 	&:hover {
 		background: darken($blue, 10%);

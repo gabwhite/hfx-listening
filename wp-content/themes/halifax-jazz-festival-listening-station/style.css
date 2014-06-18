@@ -164,10 +164,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: "Dosis", sans-serif;
-  font-size: 10rem;
-  line-height: 7rem;
+  font-size: 5rem;
+  line-height: 3.5rem;
   width: 75%;
-  margin: 0 auto;
+  margin: 5% auto;
   text-transform: uppercase;
   color: #c5c23f;
   font-style: normal;
@@ -285,7 +285,7 @@ th {
 .entry-footer {
   position: absolute;
   padding: 0.5% 2%;
-  width: 30%;
+  width: 550px;
   bottom: 0;
   background: #c5c23f;
   border: 1px solid #42a6bb; }
@@ -297,8 +297,8 @@ th {
   .entry-footer .survey-link {
     float: left;
     display: inline-block;
-    font-size: 3.6rem;
-    line-height: 4rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
     color: white;
     font-family: "Open Sans", sans-serif;
     padding-top: 5%; }
@@ -429,22 +429,26 @@ textarea {
 =====================================*/
 .gfield h2, .gfield h3 {
   font-family: "Dosis", sans-serif;
-  font-size: 10rem;
-  line-height: 7rem;
-  width: 75%;
-  margin: 0 auto;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  font-weight: normal;
   text-transform: uppercase;
-  color: #c5c23f;
-  font-style: normal;
   margin: 0;
+  font-size: 4rem;
+  line-height: 6.5rem;
   margin-bottom: 3%;
-  width: 100%; }
+  width: 100%;
+  color: #c5c23f; }
+.gfield h3 {
+  font-size: 2.5rem;
+  text-transform: none; }
 .gfield p {
-  font-size: 3.6rem;
-  line-height: 4rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
   color: white;
   font-family: "Open Sans", sans-serif;
   padding-bottom: 3%;
+  margin-bottom: 5%;
   border-bottom: 6px solid #42a6bb; }
 
 .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
@@ -460,73 +464,117 @@ textarea {
 label.gfield_label span.gfield_required {
   color: white; }
 
-.gform_wrapper .gform_body {
-  /*==========  Survey Previous and Next Styling  ==========*/
-  /*==========  Dropdown Style  ==========*/ }
-  .gform_wrapper .gform_body .gform_page_footer {
-    border-top: 0; }
-  .gform_wrapper .gform_body input[type="button"].gform_next_button {
-    width: 500px;
-    height: 100px;
-    text-align: center;
-    border: 0;
-    color: white;
-    text-decoration: none;
-    font-family: "Open Sans", sans-serif;
-    font-size: 3.5rem;
-    background: #c5c23f;
-    margin-top: 5%;
-    float: right;
-    content: url(images/right-arrow-icon.png); }
-    .gform_wrapper .gform_body input[type="button"].gform_next_button:hover, .gform_wrapper .gform_body input[type="button"].gform_next_button:focus {
-      box-shadow: none;
-      width: 475px;
-      outline: 0;
-      border: 0; }
-    .gform_wrapper .gform_body input[type="button"].gform_next_button:hover {
-      background: #a19e30; }
-  .gform_wrapper .gform_body input[type="button"]#gform_next_button_1_15 {
-    background: #42a6bb; }
-    .gform_wrapper .gform_body input[type="button"]#gform_next_button_1_15:hover {
-      background: #358595; }
-  .gform_wrapper .gform_body input[type="button"].gform_previous_button {
-    display: none; }
-  .gform_wrapper .gform_body .dropdown .ginput_container {
-    position: relative; }
-    .gform_wrapper .gform_body .dropdown .ginput_container:after {
-      background: #42a6bb url(images/down-arrow-icon.png) center;
-      position: absolute;
-      width: 40px;
-      height: 40px; }
-  .gform_wrapper .gform_body .top_label select.medium {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 33%;
-    margin: 1% 0 5% 0;
-    float: left;
-    padding: 1%;
-    background: white;
-    border: 0;
-    font-size: 3rem;
-    border-radius: 0;
-    color: #42a6bb;
-    font-family: "Open Sans", sans-serif; }
+.gform_wrapper .gform_body .gform_page_footer {
+  border-top: 0; }
+
+/*==========  Survey Previous and Next Styling  ==========*/
+input[type="button"].gform_next_button {
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: 0;
+  color: white;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  text-indent: 85px;
+  font-size: 2rem;
+  background: #c5c23f url(images/right-arrow-icon.png) no-repeat 123px -13px;
+  margin-top: 5%;
+  float: right; }
+  input[type="button"].gform_next_button:hover, input[type="button"].gform_next_button:focus {
+    box-shadow: none;
+    width: 275px;
+    outline: 0;
+    border: 0; }
+  input[type="button"].gform_next_button:hover {
+    background: #a19e30 url(images/right-arrow-icon.png) no-repeat 123px -13px;
+    text-align: left;
+    text-indent: 85px; }
+
+input[type="button"]#gform_next_button_1_15 {
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border: 0;
+  color: white;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  text-indent: 35px;
+  background: #42a6bb url(images/right-arrow-icon.png) no-repeat 148px -13px; }
+  input[type="button"]#gform_next_button_1_15:hover, input[type="button"]#gform_next_button_1_15:focus {
+    box-shadow: none;
+    width: 275px;
+    outline: 0;
+    border: 0; }
+  input[type="button"]#gform_next_button_1_15:hover {
+    background: #358595 url(images/right-arrow-icon.png) no-repeat 163px -13px;
+    text-indent: 50px; }
+
+input[type="button"].gform_previous_button {
+  display: none; }
+
+/*==========  Dropdown Style  ==========*/
+.gform_wrapper .turnintodropdown .chzn-container-single .chzn-single span {
+  padding: 1%;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  color: #42a6bb; }
+
+select.medium .gfield_select .chzn-done {
+  padding: 2%; }
+
+ul.chzn-results {
+  background: #041e2c;
+  border: 1px solid #c5c23f;
+  border-radius: 0; }
+  ul.chzn-results li {
+    font-size: 1.8rem;
+    line-height: 2.5rem; }
+
+.chzn-search {
+  display: none; }
+
+.chzn-container.chzn-container-single a.chzn-single {
+  height: 40px;
+  border-radius: 0;
+  border: 0; }
+
+.gform_wrapper .turnintodropdown .chzn-container .chzn-results .highlighted {
+  background: #052435;
+  color: #c5c23f; }
+
+.gform_wrapper .turnintodropdown .chzn-container-single .chzn-single div b {
+  background: #42a6bb url(images/down-arrow-icon.png) -13px -20px;
+  width: 50px;
+  height: 100%;
+  z-index: 100;
+  display: inline-block;
+  margin-right: 71px;
+  border-radius: 0;
+  position: absolute;
+  right: -75px; }
 
 /*==========  Survey Question Styles  ==========*/
 .gform_wrapper .top_label label.gfield_label {
   font-family: "Dosis", sans-serif;
-  font-size: 7rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   font-weight: normal;
   text-transform: uppercase;
   text-transform: none;
   color: #c5c23f;
   font-weight: normal;
-  margin-bottom: 2.5%; }
+  margin-bottom: 3.5%; }
 
 .gfield_radio li {
-  font-size: 3.6rem;
-  line-height: 4rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
   color: white;
   font-family: "Open Sans", sans-serif; }
 
@@ -540,14 +588,17 @@ label.gfield_label span.gfield_required {
 input[type="radio"] {
   display: none; }
 
+.gform_wrapper .custom-input .gfield_radio li label {
+  margin: 0; }
+
 .gfield_radio label {
   display: inline-block;
-  background: url(images/radio-button-sprite.png) -45px -93px no-repeat;
-  text-indent: 80px;
+  background: url(images/radio-button-sprite.png) -23px -46px no-repeat;
+  text-indent: 40px;
   cursor: pointer; }
 
 input[type="radio"]:checked + label {
-  background: url(images/radio-button-sprite.png) -45px -12px no-repeat; }
+  background: url(images/radio-button-sprite.png) -23px -6px no-repeat; }
 
 /*==========  Likert Styling  ==========*/
 .custom-likert table.gsurvey-likert {
@@ -567,22 +618,22 @@ input[type="radio"]:checked + label {
   background: none; }
 
 .custom-likert table.gsurvey-likert td.gsurvey-likert-choice {
-  background: url(images/radio-button-sprite.png) no-repeat center -90px;
-  height: 60px; }
+  background: url(images/radio-button-sprite.png) no-repeat center -45px;
+  height: 40px; }
   .custom-likert table.gsurvey-likert td.gsurvey-likert-choice:hover {
-    background: rgba(229, 229, 229, 0) url(images/radio-button-sprite.png) no-repeat center -90px; }
+    background: rgba(229, 229, 229, 0) url(images/radio-button-sprite.png) no-repeat center -4px; }
 .custom-likert table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
-  background: url(images/radio-button-sprite.png) no-repeat center -9px; }
+  background: url(images/radio-button-sprite.png) no-repeat center -4px; }
 
 /*==========  Input Style  ==========*/
-.gform_wrapper input[type=text], .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper input[type=tel], .gform_wrapper .custom-input input[type=number], .gform_wrapper input[type=password] {
+.gform_wrapper input[type="text"].medium, .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper input[type=tel], .gform_wrapper .custom-input input[type=number], .gform_wrapper input[type=password] {
   border: 4px solid #c5c23f;
   padding: 0.5%;
-  font-size: 3.6rem;
-  line-height: 4rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 4rem; }
+  font-size: 1.6rem; }
 
 /*==========  Checkbox Styling  ==========*/
 input[type="checkbox"] {
@@ -590,32 +641,40 @@ input[type="checkbox"] {
 
 .gfield_checkbox label {
   display: inline-block;
-  background: url(images/checkbox-button-sprite.png) -45px -95px no-repeat;
-  text-indent: 80px;
+  background: url(images/checkbox-button-sprite.png) -23px -47px no-repeat;
+  text-indent: 40px;
   cursor: pointer; }
 
 input[type="checkbox"]:checked + label {
-  background: url(images/checkbox-button-sprite.png) -45px -12px no-repeat; }
+  background: url(images/checkbox-button-sprite.png) -23px -6px no-repeat; }
 
-.custom-input .gform_wrapper ul.gfield_checkbox li,
-.custom-input .gform_wrapper ul.gfield_radio li {
-  padding: 2% 0; }
+.gform_wrapper .custom-input .gfield_checkbox li label {
+  margin: 0; }
+
+/* OTHER checkbox */
+.gform_wrapper ul li.gfield.other {
+  margin-top: 1%; }
+  .gform_wrapper ul li.gfield.other label {
+    display: none; }
 
 /*==========  Submit Button  ==========*/
 input[type="submit"] {
-  width: 500px;
-  height: 100px;
+  width: 250px;
+  height: 50px;
   text-align: center;
   border: 0;
   color: white;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2rem;
   background: #42a6bb;
-  box-shadow: none; }
+  box-shadow: none;
+  border-radius: 0;
+  display: block;
+  margin-top: 5%; }
   input[type="submit"]:hover, input[type="submit"]:focus {
     box-shadow: none;
-    width: 475px;
+    width: 275px;
     outline: 0;
     border: 0; }
   input[type="submit"]:hover {
@@ -658,36 +717,38 @@ a:active {
   position: relative;
   display: block; }
 
-.main-navigation li.artists {
+.main-navigation li {
   width: 100%;
   background: #021119 url(images/artists-icon.png) no-repeat center; }
-  .main-navigation li.artists:hover, .main-navigation li.artists:focus {
+  .main-navigation li:hover, .main-navigation li:focus {
     background: #e5e5e5 url(images/artists-icon.png) no-repeat center; }
-    .main-navigation li.artists:hover:after, .main-navigation li.artists:hover:before, .main-navigation li.artists:focus:after, .main-navigation li.artists:focus:before {
+    .main-navigation li:hover:after, .main-navigation li:hover:before, .main-navigation li:focus:after, .main-navigation li:focus:before {
       left: 100%;
-      top: 50%;
+      top: 86.5%;
       border: solid transparent;
       content: " ";
       height: 0;
       width: 0;
       position: absolute;
       pointer-events: none; }
-    .main-navigation li.artists:hover:after, .main-navigation li.artists:focus:after {
-      border-color: rgba(229, 229, 229, 0);
-      border-left-color: #e5e5e5;
-      border-width: 30px;
-      margin-top: -30px; }
-    .main-navigation li.artists:hover:before, .main-navigation li.artists:focus:before {
-      border-color: rgba(229, 229, 229, 0);
-      border-left-color: #e5e5e5;
-      border-width: 36px;
-      margin-top: -36px; }
+    .main-navigation li:hover:after, .main-navigation li:focus:after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 0 20px;
+      border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
+    .main-navigation li:hover:before, .main-navigation li:focus:before {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 0 0 20px;
+      border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
 
 .main-navigation li.current-menu-item {
   background: #e5e5e5 url(images/artists-icon.png) no-repeat center; }
   .main-navigation li.current-menu-item:after, .main-navigation li.current-menu-item:before {
     left: 100%;
-    top: 50%;
+    top: 86.5%;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -695,15 +756,17 @@ a:active {
     position: absolute;
     pointer-events: none; }
   .main-navigation li.current-menu-item:after {
-    border-color: rgba(229, 229, 229, 0);
-    border-left-color: #e5e5e5;
-    border-width: 30px;
-    margin-top: -30px; }
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
   .main-navigation li.current-menu-item:before {
-    border-color: rgba(229, 229, 229, 0);
-    border-left-color: #e5e5e5;
-    border-width: 36px;
-    margin-top: -36px; }
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
 
 .main-navigation li.survey {
   width: 100%;
@@ -1017,16 +1080,14 @@ article.page {
 /*====================================
 =            Artists Page            =
 ====================================*/
-.site-main.artists {
-  max-width: none;
-  display: block; }
-
 h2.entry-title {
   font-family: "Dosis", sans-serif;
-  font-size: 7rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   font-weight: normal;
   text-transform: uppercase;
-  color: white;
+  font-size: 4rem;
+  line-height: 5rem;
   border-bottom: 7px solid white;
   padding-bottom: 10%; }
 
@@ -1037,6 +1098,19 @@ h2.entry-title {
   margin-left: 10%; }
   .entry-content.artists p {
     font-style: italic; }
+
+article {
+  width: 550px;
+  float: left; }
+
+td {
+  vertical-align: top; }
+
+.post:nth-of-type(n+1) h2.entry-title {
+  color: #c5c23f; }
+
+.post:nth-of-type(n+2) h2.entry-title {
+  color: #c67db3; }
 
 /*-----  End of Artists Page  ------*/
 .hentry {
@@ -1050,22 +1124,13 @@ h2.entry-title {
 .group-blog .byline {
   display: inline; }
 
-section#article-container {
-  position: relative;
-  float: left;
-  display: inline; }
-
-article {
-  width: 33.33%;
-  float: left; }
-
 .page-content,
 .entry-content,
 .entry-summary {
   position: relative;
   margin: 0 auto;
-  font-size: 3.6rem;
-  line-height: 4rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
   color: white;
   font-family: "Open Sans", sans-serif; }
 
@@ -1177,25 +1242,24 @@ object {
 --------------------------------------------------------------*/
 /*==========  BUTTON STYLES  ==========*/
 button.home {
-  width: 500px;
-  height: 100px;
+  width: 250px;
+  height: 50px;
   text-align: center;
   border: 0;
   color: white;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2rem;
   background: #42a6bb;
   margin: 0 auto;
   display: block;
   z-index: 100;
   position: relative;
-  font-size: 6rem;
-  margin-top: 5%;
-  text-transform: uppercase; }
+  font-size: 3rem;
+  margin-top: 5%; }
   button.home:hover, button.home:focus {
     box-shadow: none;
-    width: 475px;
+    width: 275px;
     outline: 0;
     border: 0; }
   button.home:hover {

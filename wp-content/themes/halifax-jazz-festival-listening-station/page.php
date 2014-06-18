@@ -13,14 +13,14 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main artists" role="main">
+			<section id="page-wrap">
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'content', 'page' ); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
-
-			<?php endwhile; // end of the loop. ?>
-
+				<?php endwhile; // end of the loop. ?>
+			</section> <!-- end of page wrap -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
