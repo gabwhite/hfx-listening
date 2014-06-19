@@ -4,44 +4,64 @@
  */
 ?>
 
-
-	<div class="post-inner">
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header class="entry-header">
-				<?php the_title( sprintf( '<h2 class="entry-title">'), '</a></h2>' ); ?>
-
-			</header><!-- .entry-header -->
-
-			<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-			<div class="entry-summary">
-				<?php the_excerpt(); ?>
-			</div><!-- .entry-summary -->
-			<?php else : ?>
-			<div class="entry-content artists">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'halifax-jazz-festival-listening-station' ) ); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			
+				<div class="entry-content">
+					
 				<?php
-					wp_link_pages( array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'halifax-jazz-festival-listening-station' ),
-						'after'  => '</div>',
-					) );
-				?>
-			</div><!-- .entry-content -->
-			<?php endif; ?>
+					$args = array(
+				        'post_type' => 'marcato_artist',
+				        'posts_per_page' => -1, 
+				        'orderby'=> 'title', 
+				        'order' => 'ASC'
+					);
 
-		<footer class="entry-footer">
 
-			<div class="footer-icon">
-				<img src=" <?php echo the_field("left_icon"); ?> " alt="Icon"> 
-			</div>
+					$query = new WP_Query($args);
+					
+					foreach($query->posts as $post){
+				        $imageID = get_post_thumbnail_id($post->ID);
 
-			<div class="survey-link">
-				<p><?php echo the_field("link"); ?></p>
-			</div>
+				        $youtube = get_post_meta( $post->ID, "marcato_artist_custom_0_value");
+				        $songTitle = get_post_meta($post->ID, "marcato_artist_custom_3_value");
 
-			<div class="survey-arrow">
-				<img src=" <?php echo the_field("right_icon"); ?> " alt="Arrow Icon">
-			</div>
-		</footer><!-- .entry-footer -->
-	</article><!-- #post-## -->
-	</div> <!-- end post-inner -->
+				        if($youtube[0] || $songTitle  && get_the_post_thumbnail($post->ID, 'large') ){
+				        echo "<div class=\"post-inner\">";
+				            echo "<div class='artist'>";
+				       			echo "<div class='artistimg'>";
+				       				echo get_the_post_thumbnail($post->ID, 'large');
+				        		echo "</div>";
 
+				        		echo "<div class=\"artist-text\">";
+				        			echo "<h2>".$post->post_title . "</h2>";
+				       				echo "<h4>Now Playing</h4>\n";
+				            ?>
+							
+								<p><?php echo get_field("song_title"); ?> </p>
+				            </div>
+			<footer class="entry-footer">
+
+				<div class="footer-icon">
+					<a class='' href=" <?php echo $youtube[0]; ?>"> 
+					<img src="<?php echo get_template_directory_uri(); ?>/images/listen-icon.png"  alt="Listen Icon"> 
+					</a>
+				</div>
+
+				<div class="survey-link">
+					<p><?php // echo the_field("link"); ?></p>
+				</div>
+
+				<div class="survey-arrow">
+				        
+						<img src=" <?php echo get_template_directory_uri(); ?>/images/info-icon.png" alt="Arrow Icon">
+					</a>
+				</div>
+			</footer><!-- .entry-footer -->
+		</div> <!-- end of artists -->
+	</div> <!-- end of post-inner -->
+		<?php  
+	        }
+		}
+		?>
+		</div><!-- .entry-content -->
+		</article><!-- #post-## -->

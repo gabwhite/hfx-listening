@@ -38,7 +38,7 @@ figure {
 	margin: 0;
 }
 table {
-	margin: 0 0 1.5em;
+	margin: 0;
 	width: 100%;
 }
 th {
@@ -51,7 +51,8 @@ th {
 .entry-footer {
 	position: absolute; 
 	padding: 0.5% 2%;
-	width: 550px;
+	width: 450px;
+	top: 100%;
 	bottom: 0;
 	background: $green;
 	border: 1px solid $blue;

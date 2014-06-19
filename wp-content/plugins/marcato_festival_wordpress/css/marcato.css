@@ -1,0 +1,137 @@
+/*Artists*/
+
+	div.artist_homebase{}
+	div.artist_genre{}
+	img.artist_photo{}
+	div.artist_bio{}
+	div.artist_websites{}
+	div.artist_websites a.artist_website{}
+	div.artist_embedded_video{}
+	table.artist_lineup{
+	  margin-top:10px;
+	}
+		
+/* Venues */
+
+	div.venue_community{
+		display:none;
+	}
+	div.venue_address{}
+	div.venue_address span.street{
+		display:block;
+	}
+	div.venue_address span.city{
+		display:inline-block;
+		margin-right:3px;
+	}
+	div.venue_address span.province_state{
+		display:inline-block;
+		margin-right:3px;
+	}
+	div.venue_address span.country{
+		display:block;
+		margin-right:3px;
+	}
+	div.venue_address span.postal_code{}
+	div.venue_phone{}
+		
+/*Workshops*/
+	
+	div.workshop_time{}
+	div.workshop_time span.date{
+		margin-right:5px;
+	}
+	div.workshop_time span.time_divider{
+		margin-left:3px;
+		margin-right:3px;
+	}
+	div.workshop_time span.start_time{}
+	div.workshop_time span.end_time{}
+
+	div.workshop_venue{}
+	div.workshop_venue a.workshop_venue_link{}
+
+	div.workshop_ticket_info{}
+	div.workshop_ticket_info span.price{}
+	div.workshop_ticket_info span.ticket_info{}
+	div.workshop_ticket_info a.ticket_link{}
+	div.workshop_description{}
+
+	div.workshop_types{}
+	div.workshop_types span.workshop_type{}
+
+	table.workshop_lineup{}
+	table.workshop_lineup tr{}
+	table.workshop_lineup td.presentation_time{}
+	table.workshop_lineup td.presentation_time span.time_divider{
+		margin-left:3px;
+		margin-right:3px;
+	}
+	table.workshop_lineup td.presentation_time span.presentation_start{}
+	table.workshop_lineup td.presentation_time span.presentation_end{
+		margin-right:30px;
+	}
+	table.workshop_lineup td.presenter{}
+
+/*Shows*/
+
+	div.show_time{}
+	div.show_time span.date{
+		margin-right:5px;
+	}
+	div.show_time span.time_divider{
+		margin-left:3px;
+		margin-right:3px;
+	}
+	div.show_time span.start_time{}
+	div.show_time span.end_time{}
+		
+	div.show_venue{}
+	div.show_venue a.show_venue_link{}
+
+	div.show_ticket_info{}
+	div.show_ticket_info span.price{}
+	div.show_ticket_info span.ticket_info{}
+	div.show_ticket_info a.ticket_link{}
+	div.show_description{}
+
+	table.show_lineup{}
+	table.show_lineup tr{}
+	table.show_lineup td.performance_time{}
+	table.show_lineup td.performance_time span.time_divider{
+		margin-left:3px;
+		margin-right:3px;
+	}
+	table.show_lineup td.performance_time span.performance_start{}
+	table.show_lineup td.performance_time span.performance_end{
+		margin-right:30px;
+	}
+	table.show_lineup td.artist{}
+/*Schedule Page*/
+	div.schedule_event{}
+	div.schedule_event div.schedule_event_title{
+		font-weight:bold;
+	}
+		
+	div.schedule_event div.schedule_time{}
+	div.schedule_event div.schedule_time span.time_divider{
+		margin-left:3px;
+		margin-right:3px;
+	}
+	div.schedule_event div.schedule_time span.date{}
+	div.schedule_event div.schedule_time span.start_time{
+		margin-left:5px;
+	}
+	div.schedule_event div.schedule_time span.end_time{
+	}
+		
+	div.schedule_event div.schedule_venue{
+		font-size:80%;
+	}
+	div.schedule_event div.schedule_venue a.schedule_venue_link{}
+		
+	div.schedule_event table.schedule_timeslots{}
+	div.schedule_event table.schedule_timeslots tr{}
+	div.schedule_event table.schedule_timeslots td.time{}
+	div.schedule_event table.schedule_timeslots td.artist{}
+		

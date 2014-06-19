@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main artists" role="main">
-
+		<div id="page-wrap">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -31,15 +31,16 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php halifax_jazz_festival_listening_station_paging_nav(); ?>
+			<?php //halifax_jazz_festival_listening_station_paging_nav(); ?>
 
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
-
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	</body>
+	</html>
 
-<?php get_footer(); ?>
