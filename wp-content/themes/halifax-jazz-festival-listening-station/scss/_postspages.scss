@@ -60,10 +60,18 @@ h2.entry-title {
 
 	h2 {
 		@include h2-artist-name;
-		font-size: 5rem;
-		line-height: 5.5rem;
+		font-size: 4rem;
+		line-height: 4.5rem;
 		margin-bottom: 10%;
 	}
+}
+
+td .artist:nth-of-type(3) h2{
+	color: $pink;
+}
+
+td .artist:nth-of-type(4) h2 {
+	color: $green;
 }
 
 article {
@@ -84,7 +92,65 @@ img.attachment-large {
 }
 
 .artist-text {
-	margin: 10%;
+	margin: 5%;
+
+	p {
+		font-style: italic;
+	}
+}
+
+/*==========  Artist Bio Modal  ==========*/
+
+.artist-bio {
+	background: $light-grey;
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 450px;
+
+	h3 {
+		@include h3;
+		margin: 25% 0 0 10%;
+	}
+
+	p{
+		color: $text-grey;
+		margin: 2% 10% 0 10%;
+		font-size: 1.4rem;
+	}
+
+	h4 {
+		@include h4;
+		margin: 5% 10% 0 10%;
+	}
+}
+
+.close-btn {
+	position: absolute; 	
+	width: 450px;
+	bottom: 0;
+	background: $mid-grey;
+	float: right;
+
+	p, img {
+		float: right;
+		display: inline-block;
+	}
+
+	img {
+		margin-right: 5%;
+	}
+
+	p {
+		float: left;
+		text-transform: uppercase;
+		color: $such-grey;
+		font-weight: 700;
+		padding: 5% 0 4% 0;
+		margin-left: 74%;
+		margin-right: 0;
+	}
 }
 
 

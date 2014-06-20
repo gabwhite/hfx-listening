@@ -96,6 +96,8 @@ function halifax_jazz_festival_listening_station_scripts() {
 
 	wp_enqueue_style( 'halifax-jazz-festival-listening-station-style', get_stylesheet_uri() );
 
+	wp_enqueue_style("Animate CSS", get_template_directory_uri()."/scss/animate.css");
+
 	wp_enqueue_script("styling-select", get_template_directory_uri()."/js/styling_select/js/select.js", array("jquery") );
 
 	wp_enqueue_script( 'halifax-jazz-festival-listening-station-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

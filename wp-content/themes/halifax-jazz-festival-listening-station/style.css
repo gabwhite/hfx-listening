@@ -1,5 +1,5 @@
 /*
-Theme Name: Doreen Frumkin Casting
+Theme Name: Halifax Jazz Festival
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -282,9 +282,7 @@ th {
 ====================================*/
 .entry-footer {
   position: absolute;
-  padding: 0.5% 2%;
   width: 450px;
-  top: 100%;
   bottom: 0;
   background: #c5c23f;
   border: 1px solid #42a6bb; }
@@ -541,6 +539,7 @@ ul.chzn-results {
 
 .chzn-container.chzn-container-single a.chzn-single {
   height: 40px;
+  min-width: 250px;
   border-radius: 0;
   border: 0; }
 
@@ -597,7 +596,7 @@ input[type="radio"] {
   cursor: pointer; }
 
 input[type="radio"]:checked + label {
-  background: url(images/radio-button-sprite.png) -23px -6px no-repeat; }
+  background: url(images/radio-button-sprite.png)-23px -6px no-repeat; }
 
 /*==========  Likert Styling  ==========*/
 .custom-likert table.gsurvey-likert {
@@ -627,6 +626,7 @@ input[type="radio"]:checked + label {
 /*==========  Input Style  ==========*/
 .gform_wrapper input[type="text"].medium, .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper input[type=tel], .gform_wrapper .custom-input input[type=number], .gform_wrapper input[type=password] {
   border: 4px solid #c5c23f;
+  min-width: 250px;
   padding: 0.5%;
   font-size: 1.8rem;
   line-height: 3rem;
@@ -734,13 +734,13 @@ a:active {
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 20px 0 0 20px;
+      border-width: 22px 0 0 20px;
       border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
     .main-navigation li:hover:before, .main-navigation li:focus:before {
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 20px 0 0 20px;
+      border-width: 22px 0 0 20px;
       border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
 
 .main-navigation li.current-menu-item {
@@ -758,13 +758,13 @@ a:active {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 20px 0 0 20px;
+    border-width: 22px 0 0 20px;
     border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
   .main-navigation li.current-menu-item:before {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 20px 0 0 20px;
+    border-width: 22px 0 0 20px;
     border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
 
 .main-navigation li.survey {
@@ -1116,9 +1116,15 @@ h2.entry-title {
     line-height: 3.5rem;
     font-weight: normal;
     text-transform: uppercase;
-    font-size: 5rem;
-    line-height: 5.5rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
     margin-bottom: 10%; }
+
+td .artist:nth-of-type(3) h2 {
+  color: #c67db3; }
+
+td .artist:nth-of-type(4) h2 {
+  color: #c5c23f; }
 
 article {
   width: 100%; }
@@ -1134,7 +1140,57 @@ img.attachment-large {
   min-width: 450px; }
 
 .artist-text {
-  margin: 10%; }
+  margin: 5%; }
+  .artist-text p {
+    font-style: italic; }
+
+/*==========  Artist Bio Modal  ==========*/
+.artist-bio {
+  background: #f2f2f2;
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 450px; }
+  .artist-bio h3 {
+    font-family: "Dosis", sans-serif;
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #333333;
+    margin: 25% 0 0 10%; }
+  .artist-bio p {
+    color: #333333;
+    margin: 2% 10% 0 10%;
+    font-size: 1.4rem; }
+  .artist-bio h4 {
+    font-family: "Open Sans", sans-serif;
+    color: #333333;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    font-weight: bold;
+    margin: 5% 10% 0 10%; }
+
+.close-btn {
+  position: absolute;
+  width: 450px;
+  bottom: 0;
+  background: #e5e5e5;
+  float: right; }
+  .close-btn p, .close-btn img {
+    float: right;
+    display: inline-block; }
+  .close-btn img {
+    margin-right: 5%; }
+  .close-btn p {
+    float: left;
+    text-transform: uppercase;
+    color: #848484;
+    font-weight: 700;
+    padding: 5% 0 4% 0;
+    margin-left: 74%;
+    margin-right: 0; }
 
 /*-----  End of Artists Page  ------*/
 .hentry {

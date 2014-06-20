@@ -209,6 +209,7 @@ ul.chzn-results {
 
 .chzn-container.chzn-container-single a.chzn-single {
 	height: 40px;
+	min-width: 250px;
 	border-radius: 0;
 	border: 0;
 }
@@ -315,6 +316,7 @@ input[type="radio"]{
 
 .gform_wrapper input[type="text"].medium, .gform_wrapper input[type=url], .gform_wrapper input[type=email], .gform_wrapper input[type=tel],.gform_wrapper .custom-input input[type=number], .gform_wrapper input[type=password]{
 		border: 4px solid $green;
+		min-width: 250px;
 		padding: 0.5%;
 		@include p;
 		font-size: 1.6rem;	

@@ -24,6 +24,7 @@ $light-grey      : #f2f2f2;
 $mid-grey 	     : #e5e5e5;
 $mid-grey-transp : rgba(229,229,229,0);
 $text-grey 	     : #333;
+$such-grey		 : #848484;
 
 
 /*==========  02. Typography  ==========*/
@@ -53,6 +54,24 @@ body {
 	font-weight: normal;
 	text-transform: uppercase;
 }
+
+@mixin h3 {
+	font-family: "Dosis", sans-serif;
+	font-size: 3rem;
+	line-height: 4rem;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: $text-grey;
+}
+
+@mixin h4 {
+	font-family: $open-sans;
+	color: $text-grey;
+	font-size: 1.8rem;
+	line-height: 3rem;
+	font-weight: bold;
+}
+
 
 @mixin p {
 	font-size: 1.8rem;

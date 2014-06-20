@@ -21,11 +21,10 @@
 					
 					foreach($query->posts as $post){
 				        $imageID = get_post_thumbnail_id($post->ID);
-
+				        $artistbio = get_post_meta($post->ID, "marcato_artist_bio_limited");
 				        $youtube = get_post_meta( $post->ID, "marcato_artist_custom_0_value");
-				        $songTitle = get_post_meta($post->ID, "marcato_artist_custom_3_value");
 
-				        if($youtube[0] || $songTitle  && get_the_post_thumbnail($post->ID, 'large') ){
+				        if($youtube[0] && $artistbio[0] && get_the_post_thumbnail($post->ID, 'large') ){
 				        echo "<div class=\"post-inner\">";
 				            echo "<div class='artist'>";
 				       			echo "<div class='artistimg'>";
@@ -34,11 +33,13 @@
 
 				        		echo "<div class=\"artist-text\">";
 				        			echo "<h2>".$post->post_title . "</h2>";
-				       				echo "<h4>Now Playing</h4>\n";
+				       				
 				            ?>
-							
-								<p><?php echo get_field("song_title"); ?> </p>
-				            </div>
+				            		<h3> <?php echo get_field("special_guests"); ?> </h3>
+				            		<h4>Now Playing:</h4>
+									<p><?php echo get_field("song_title"); ?> </p>
+				            	</div> <!-- end of artisttext -->
+							</div> <!-- end of artist -->
 			<footer class="entry-footer">
 
 				<div class="footer-icon">
@@ -47,17 +48,30 @@
 					</a>
 				</div>
 
-				<div class="survey-link">
-					<p><?php // echo the_field("link"); ?></p>
-				</div>
-
 				<div class="survey-arrow">
-				        
-						<img src=" <?php echo get_template_directory_uri(); ?>/images/info-icon.png" alt="Arrow Icon">
+						<a href="#">
+							<img src=" <?php echo get_template_directory_uri(); ?>/images/info-icon.png" alt="Arrow Icon">
+						</a>
 					</a>
 				</div>
+
+			<!-- MODAL WITH BIO INFO -->
+
 			</footer><!-- .entry-footer -->
-		</div> <!-- end of artists -->
+			<div class="artist-bio animated fadeInUp">
+				<h3>Artist name </h3> <!-- artist name -->
+				<p><?php echo $artistbio[0]; ?></p> <!-- Bio info -->
+
+				<h4>Personnel</h4> <!-- Personnel -->
+				<p>Artist Name</p>
+
+				<div class="close-btn">
+					<p>Close</p>
+					<a href="#">
+						<img class="close" src=" <?php echo get_template_directory_uri(); ?>/images/close-icon.png" alt="Close Icon">
+					</a>
+				</div>
+			</div>
 	</div> <!-- end of post-inner -->
 		<?php  
 	        }
