@@ -16,7 +16,6 @@
 				        'order' => 'ASC'
 					);
 
-
 					$query = new WP_Query($args);
 					
 					foreach($query->posts as $post){
@@ -43,7 +42,7 @@
 			<footer class="entry-footer">
 
 				<div class="footer-icon">
-					<a class='' href=" <?php echo $youtube[0]; ?>"> 
+					<a class="various fancybox.iframe" href=" <?php echo $youtube[0]; ?>"> 
 					<img src="<?php echo get_template_directory_uri(); ?>/images/listen-icon.png"  alt="Listen Icon"> 
 					</a>
 				</div>

@@ -92,7 +92,7 @@ add_action( 'widgets_init', 'halifax_jazz_festival_listening_station_widgets_ini
  * Enqueue scripts and styles.
  */
 function halifax_jazz_festival_listening_station_scripts() {
-	wp_enqueue_style("google-fonts", "http://fonts.googleapis.com/css?family=Dosis:300,400,500,700' rel='stylesheet");
+	wp_enqueue_style("google-fonts", "http://fonts.googleapis.com/css?family=Dosis:400,500,700|Open+Sans:400italic,400,700' rel='stylesheet' type='text/css");
 
 	wp_enqueue_style( 'halifax-jazz-festival-listening-station-style', get_stylesheet_uri() );
 
@@ -104,7 +104,11 @@ function halifax_jazz_festival_listening_station_scripts() {
 
 	wp_enqueue_script( 'halifax-jazz-festival-listening-station-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script("retinajs", get_template_directory_uri(). "/js/retina-1.3.0/retina.min.js");
+	wp_enqueue_script("retinajs", get_template_directory_uri()."/js/retina.js", array("jquery"));
+
+	wp_enqueue_style("fancyboxCss", get_template_directory_uri()."/js/fancybox/source/jquery.fancybox.css");
+
+	wp_enqueue_script("fancybox", get_template_directory_uri()."/js/fancybox/source/jquery.fancybox.pack.js", array("jquery"));
 
 	wp_enqueue_script("scripts", get_template_directory_uri()."/js/scripts.js", array("jquery"));
 

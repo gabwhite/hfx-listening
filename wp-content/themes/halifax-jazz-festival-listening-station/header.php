@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'halifax-jazz-festival-listening-station' ); ?></a>
+	
 
 	<header id="masthead" class="site-header" role="banner">
 

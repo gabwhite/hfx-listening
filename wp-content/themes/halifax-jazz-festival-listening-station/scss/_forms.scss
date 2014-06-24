@@ -11,7 +11,7 @@ input[type="reset"],
 input[type="submit"] {
 	border: 1px solid #ccc;
 	border-color: #ccc #ccc #bbb #ccc;
-	border-radius: 3px;
+	border-radius: 0;
 	background: #e6e6e6;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
 	color: rgba(0, 0, 0, .8);
@@ -29,6 +29,7 @@ input[type="reset"]:hover,
 input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa #bbb;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	border-radius: 0;
 }
 button:focus,
 input[type="button"]:focus,
@@ -101,10 +102,14 @@ textarea {
 		@include h2-artist-name;
 		margin: 0;
 		font-size: 4rem;
-		line-height: 6.5rem;
+		line-height: 3.5rem;
 		margin-bottom: 3%;
 		width: 100%;
 		color: $green;
+	}
+
+	h2 {
+		line-height: 5rem;
 	}
 
 	h3 { 
@@ -114,7 +119,7 @@ textarea {
 
 	p {
 		@include p;
-		padding-bottom: 3%;
+		padding-bottom: 10%;
 		margin-bottom: 5%;
 		border-bottom: 6px solid $blue;
 	}
@@ -151,15 +156,17 @@ label.gfield_label span.gfield_required {
 	input[type="button"].gform_next_button {
 		@include button;
 		text-align: left;
-		text-indent: 85px;
+		text-indent: 80px;
 		font-size: 2rem;
-		background: $green url(images/right-arrow-icon.png) no-repeat 123px -13px;
+		background: $green url(images/right-arrow-icon.png) no-repeat 130px -13px;
 		margin-top: 5%;
+		margin-bottom: 25%;
 		float: right;
+		border-radius: 0;
 		&:hover {
-			background: darken($green, 10%) url(images/right-arrow-icon.png) no-repeat 123px -13px;
+			background: darken($green, 10%) url(images/right-arrow-icon.png) no-repeat 130px -13px;
 			text-align: left;
-			text-indent: 85px;
+			text-indent: 80px;
 		}
 	}
 
@@ -167,11 +174,11 @@ label.gfield_label span.gfield_required {
 		@include button;
 		text-align: left;
 		text-indent: 35px;
-		background: $blue url(images/right-arrow-icon.png) no-repeat 148px -13px;
+		border-radius: 0;
+		background: $blue url(images/right-arrow-icon.png) no-repeat 170px -13px;
 	
 		&:hover {
-			background: darken($blue, 10%) url(images/right-arrow-icon.png) no-repeat 163px -13px;
-			text-indent: 50px;
+			background: darken($blue, 10%) url(images/right-arrow-icon.png) no-repeat 170px -13px;
 		}
 	}
 
@@ -192,15 +199,18 @@ select.medium .gfield_select .chzn-done{
 	padding: 2%;
 }
 
-ul.chzn-results {
+.turnintodropdown  ul.chzn-results {
 	background: $darkest-blue;
 	border: 1px solid $green;
 	border-radius: 0;
 
 	li {
 		font-size: 1.8rem;
-		line-height: 2.5rem;
 	}
+}
+
+.gform_wrapper .turnintodropdown  .chzn-container ul.chzn-results li{
+	line-height: 3rem;
 }
 
 .chzn-search {
@@ -209,9 +219,19 @@ ul.chzn-results {
 
 .chzn-container.chzn-container-single a.chzn-single {
 	height: 40px;
-	min-width: 250px;
+	min-width: 215px;
 	border-radius: 0;
 	border: 0;
+}
+
+.chzn-drop{
+	min-width: 250px;
+}
+
+ul.chzn-results{
+	li {
+		line-height: 2.5rem;
+	}
 }
 
 .gform_wrapper .turnintodropdown .chzn-container .chzn-results .highlighted {
@@ -238,12 +258,21 @@ ul.chzn-results {
 	text-transform: none;
 	color: $green;
 	font-weight: normal;
-	margin-bottom: 3.5%;
+	margin-bottom: 15%;
 }
 
-.gfield_radio li {
-	@include p;
+@media screen and (min-width: 765px){
+	.gform_wrapper .top_label label.gfield_label{
+		margin-bottom: 5%;
+	}
 }
+
+.custom-input .gfield_radio li {
+	@include p;
+	padding: 5% 0;
+}
+
+
 
 .gform_wrapper ul li.gfield {
 	margin-top: 5%;
@@ -261,56 +290,33 @@ input[type="radio"]{
 }
 
 .gform_wrapper .custom-input .gfield_radio li label {
-	margin: 0;
+	margin: 5% 0;
+}
+
+@media screen and (min-width: 765px){
+	.gform_wrapper .custom-input .gfield_radio li label{
+		margin: 2% 0;
+	}
 }
 
 .gfield_radio label {
 		display: inline-block;
-		background: url(images/radio-button-sprite.png) -23px -46px no-repeat;
+		background: url(images/radio-button.svg) 0 -2px no-repeat;
+		background-size: 30px 30px;
 		text-indent: 40px;
 		cursor: pointer;
 	}
 
-	input[type="radio"]:checked+label{
-			background: url(images/radio-button-sprite.png)-23px -6px no-repeat;
+.custom-input input[type="radio"]:checked+label{
+			background: url(images/radio-button-checked.svg) 0 -2px no-repeat;
+			background-size: 30px 30px;
+			font-weight: regular;
 		}
 
-/*==========  Likert Styling  ==========*/
-	.custom-likert table.gsurvey-likert {
-		border-bottom: 0;
-		margin-left: -2%;
-	}
+.gform_wrapper .custom-input ul.gfield_radio li input[type="radio"]:checked+label {
+	font-weight: 400;
+}
 
-	.custom-likert .gsurvey-likert-choice-label{
-		padding-bottom: 1%;
-	}
-	
-	.custom-likert table.gsurvey-likert tr td{
-		border: 0;
-	}
-
-	.custom-likert table.gsurvey-likert tr td:first-child{
-		border-left: 0;
-	}
-
-	.custom-likert table.gsurvey-likert td.gsurvey-likert-choice-label{
-			background: none;
-	}
-
-	.custom-likert table.gsurvey-likert {
-		td.gsurvey-likert-choice {
-			background: url(images/radio-button-sprite.png) no-repeat center -45px;
-			height: 40px;
-
-			&:hover {
-				background: $mid-grey-transp url(images/radio-button-sprite.png) no-repeat center -4px;
-			}
-		}
-	
-		td.gsurvey-likert-choice.gsurvey-likert-selected {
-			background: url(images/radio-button-sprite.png)no-repeat center -4px;
-		}
-	}
 
 /*==========  Input Style  ==========*/
 
@@ -320,6 +326,11 @@ input[type="radio"]{
 		padding: 0.5%;
 		@include p;
 		font-size: 1.6rem;	
+		margin-bottom: 5%;
+}
+
+.gform_wrapper .top_label li.custom-input label.gfield_label {
+	margin-bottom: 5%;
 }
 
 /*==========  Checkbox Styling  ==========*/
@@ -333,7 +344,6 @@ input[type="checkbox"]{
 		background: url(images/checkbox-button-sprite.png) -23px -47px no-repeat;
 		text-indent: 40px;
 		cursor: pointer;
-
 	}
 
 	input[type="checkbox"]:checked+label{
@@ -341,7 +351,17 @@ input[type="checkbox"]{
 		}
 
 	 .gform_wrapper .custom-input .gfield_checkbox li label{
-		margin: 0;
+		margin: 5% 0;
+	}
+
+	@media screen and (max-width: 765px){
+		.gform_wrapper .custom-input .gfield_checkbox li label{
+			margin: 2% 0;
+		}
+	}
+
+	.gform_wrapper .custom-input ul.gfield_checkbox li input[type="checkbox"]:checked+label{
+		font-weight: 400;
 	}
 
 /* OTHER checkbox */
