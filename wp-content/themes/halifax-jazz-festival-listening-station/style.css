@@ -165,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   background: url(images/HJF-logo.svg) no-repeat;
   background-size: contain;
-  padding: 0;
+  padding: 0 5%;
   text-align: center;
   width: 80%;
   margin: 0 auto;
@@ -284,13 +284,20 @@ th {
   position: absolute;
   width: 450px;
   bottom: 0;
-  background: #c5c23f;
-  border: 1px solid #42a6bb; }
+  background: #c5c23f; }
   .entry-footer .footer-icon {
-    float: left; }
+    float: left;
+    width: 80%; }
     .entry-footer .footer-icon img {
       float: left;
-      display: inline-block; }
+      display: inline-block;
+      margin: 0; }
+    .entry-footer .footer-icon p {
+      margin: 6% auto; }
+  .entry-footer .artist-info img, .entry-footer .survey-arrow img {
+    float: left;
+    display: inline-block;
+    margin: 0; }
   .entry-footer .survey-link {
     float: left;
     display: inline-block;
@@ -298,8 +305,8 @@ th {
     line-height: 3rem;
     color: white;
     font-family: "Open Sans", sans-serif;
-    padding-top: 5%; }
-  .entry-footer .survey-arrow {
+    padding-top: 6%; }
+  .entry-footer .artist-info, .entry-footer .survey-arrow {
     float: right;
     border-left: 2px dotted white; }
 
@@ -427,7 +434,7 @@ textarea {
 =====================================*/
 .gfield h2, .gfield h3 {
   font-family: "Dosis", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 3.5rem;
   font-weight: normal;
   text-transform: uppercase;
@@ -572,7 +579,7 @@ ul.chzn-results li {
 /*==========  Survey Question Styles  ==========*/
 .gform_wrapper .top_label label.gfield_label {
   font-family: "Dosis", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 3.5rem;
   font-weight: normal;
   text-transform: uppercase;
@@ -604,7 +611,7 @@ input[type="radio"] {
 .gform_wrapper .custom-input .gfield_radio li label {
   margin: 5% 0; }
 
-@media screen and (min-width: 765px) {
+@media screen and (min-width: 768px) {
   .gform_wrapper .custom-input .gfield_radio li label {
     margin: 2% 0; } }
 .gfield_radio label {
@@ -653,7 +660,7 @@ input[type="checkbox"]:checked + label {
 .gform_wrapper .custom-input .gfield_checkbox li label {
   margin: 5% 0; }
 
-@media screen and (max-width: 765px) {
+@media screen and (min-width: 768px) {
   .gform_wrapper .custom-input .gfield_checkbox li label {
     margin: 2% 0; } }
 .gform_wrapper .custom-input ul.gfield_checkbox li input[type="checkbox"]:checked + label {
@@ -724,51 +731,51 @@ a:active {
   position: relative;
   display: block; }
 
-.main-navigation li {
+.main-navigation li.artists {
   width: 100%;
-  background: #021119 url(images/artists-icon.png) no-repeat center; }
-  .main-navigation li:hover, .main-navigation li:focus {
+  background: #021119 url(images/artists-icon-white.png) no-repeat center; }
+  .main-navigation li.artists:hover, .main-navigation li.artists:active {
     background: #e5e5e5 url(images/artists-icon.png) no-repeat center; }
-    .main-navigation li:hover:after, .main-navigation li:hover:before, .main-navigation li:focus:after, .main-navigation li:focus:before {
+    .main-navigation li.artists:hover:after, .main-navigation li.artists:hover:before, .main-navigation li.artists:active:after, .main-navigation li.artists:active:before {
       left: 100%;
-      top: 86.5%;
+      bottom: 0;
       border: solid transparent;
       content: " ";
       height: 0;
       width: 0;
       position: absolute;
       pointer-events: none; }
-    .main-navigation li:hover:after, .main-navigation li:focus:after {
+    .main-navigation li.artists:hover:after, .main-navigation li.artists:active:after {
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 22px 0 0 20px;
       border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
-    .main-navigation li:hover:before, .main-navigation li:focus:before {
+    .main-navigation li.artists:hover:before, .main-navigation li.artists:active:before {
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 22px 0 0 20px;
       border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
 
-.main-navigation li.current-menu-item {
+.artists_current_menu_item {
   background: #e5e5e5 url(images/artists-icon.png) no-repeat center; }
-  .main-navigation li.current-menu-item:after, .main-navigation li.current-menu-item:before {
+  .artists_current_menu_item:after, .artists_current_menu_item:before {
     left: 100%;
-    top: 86.5%;
+    bottom: 0;
     border: solid transparent;
     content: " ";
     height: 0;
     width: 0;
     position: absolute;
     pointer-events: none; }
-  .main-navigation li.current-menu-item:after {
+  .artists_current_menu_item:after {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 22px 0 0 20px;
     border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
-  .main-navigation li.current-menu-item:before {
+  .artists_current_menu_item:before {
     width: 0;
     height: 0;
     border-style: solid;
@@ -776,13 +783,55 @@ a:active {
     border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
 
 .main-navigation li.survey {
-  width: 100%;
-  background: url(images/survey-icon.png) no-repeat center; }
-  .main-navigation li.survey:hover, .main-navigation li.survey:focus, .main-navigation li.survey:active {
+  background: #021119 url(images/survey-icon-white.png) no-repeat center;
+  width: 100%; }
+  .main-navigation li.survey:hover, .main-navigation li.survey:active {
     background: #e5e5e5 url(images/survey-icon-hover.png) no-repeat center; }
+    .main-navigation li.survey:hover:after, .main-navigation li.survey:hover:before, .main-navigation li.survey:active:after, .main-navigation li.survey:active:before {
+      left: 100%;
+      bottom: 0;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+    .main-navigation li.survey:hover:after, .main-navigation li.survey:active:after {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 22px 0 0 20px;
+      border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
+    .main-navigation li.survey:hover:before, .main-navigation li.survey:active:before {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 22px 0 0 20px;
+      border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
 
-.main-navigation li.survey.current-menu-item {
+.survey_current_menu_item {
   background: #e5e5e5 url(images/survey-icon-hover.png) no-repeat center; }
+  .survey_current_menu_item:after, .survey_current_menu_item:before {
+    left: 100%;
+    bottom: 0;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .survey_current_menu_item:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22px 0 0 20px;
+    border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
+  .survey_current_menu_item:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22px 0 0 20px;
+    border-color: rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) rgba(229, 229, 229, 0) #e5e5e5; }
 
 .main-navigation a {
   text-decoration: none;
@@ -1069,7 +1118,7 @@ img.home-tent {
   margin: 0 auto;
   display: block;
   padding-left: 10%;
-  margin-bottom: 2%; }
+  padding-right: 5%; }
 
 article.home {
   width: 100%; }
@@ -1084,7 +1133,7 @@ article.home {
   color: #c5c23f;
   font-style: normal;
   text-align: center;
-  margin: 3% auto;
+  margin: 1% auto;
   margin-bottom: 8%; }
 
 /*-----  End of Home Page  ------*/
@@ -1095,7 +1144,8 @@ article.home {
   padding: 5% 10%; }
 
 article.page {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 /*-----  End of Survey  ------*/
 /*====================================
@@ -1103,12 +1153,10 @@ article.page {
 ====================================*/
 h2.entry-title {
   font-family: "Dosis", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 3.5rem;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 4rem;
-  line-height: 5rem;
   border-bottom: 7px solid white;
   padding-bottom: 10%; }
 
@@ -1120,25 +1168,46 @@ h2.entry-title {
   position: relative; }
   .artist h2 {
     font-family: "Dosis", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 3.5rem;
     font-weight: normal;
     text-transform: uppercase;
-    font-size: 4rem;
-    line-height: 4.5rem;
-    margin-bottom: 10%; }
+    margin-bottom: 5%; }
 
-td .artist:nth-of-type(3) h2 {
-  color: #c67db3; }
-
-td .artist:nth-of-type(4) h2 {
+td:nth-of-type(3n+1) .artist h2, td:nth-of-type(3n+1) .artist h4 {
   color: #c5c23f; }
 
+td:nth-of-type(3n+2) .artist h2, td:nth-of-type(3n+2) .artist h4 {
+  color: #c67db3; }
+
+td:nth-of-type(3n+3) .artist h2, td:nth-of-type(3n+3) .artist h4 {
+  color: #42a6bb; }
+
+td:nth-of-type(3n+1) .entry-footer {
+  background: #c5c23f; }
+
+td:nth-of-type(3n+2) .entry-footer {
+  background: #c67db3; }
+
+td:nth-of-type(3n+3) .entry-footer {
+  background: #42a6bb; }
+
+td:nth-of-type(2n+1) {
+  background: #052435; }
+
+td:nth-of-type(2n+2) {
+  background: #041e2c; }
+
 article {
-  width: 100%; }
+  width: 24750px;
+  height: 748px;
+  overflow: hidden; }
 
 td {
-  vertical-align: top; }
+  float: left;
+  position: relative;
+  display: block;
+  height: 748px; }
 
 .artistimg {
   width: 100%;
@@ -1148,7 +1217,8 @@ img.attachment-large {
   min-width: 450px; }
 
 .artist-text {
-  margin: 5%; }
+  margin: 5%;
+  padding-bottom: 20%; }
   .artist-text p {
     font-style: italic; }
 
@@ -1180,27 +1250,44 @@ img.attachment-large {
     font-weight: bold;
     margin: 5% 10% 0 10%; }
 
+.scrolly {
+  overflow-y: scroll;
+  height: 88%; }
+
 .close-btn {
   position: absolute;
   width: 450px;
   bottom: 0;
   background: #e5e5e5;
-  float: right; }
+  float: right;
+  padding: 1%;
+  cursor: pointer; }
   .close-btn p, .close-btn img {
     float: right;
     display: inline-block; }
   .close-btn img {
+    margin-right: 5%;
+    width: 35px;
     margin-right: 5%; }
   .close-btn p {
     float: left;
     text-transform: uppercase;
     color: #848484;
     font-weight: 700;
-    padding: 5% 0 4% 0;
-    margin-left: 74%;
+    padding: 3.5% 0 4% 0;
+    margin-left: 75%;
     margin-right: 0; }
 
 /*-----  End of Artists Page  ------*/
+/*==========  Survey Ad Page  ==========*/
+.artist.ad h2 {
+  margin: 30% 10% 0 10%;
+  padding-bottom: 5%;
+  border-bottom: 3px solid; }
+.artist.ad p {
+  font-style: italic;
+  margin: 10% 10% 0 10%; }
+
 .hentry {
   margin: 0; }
 

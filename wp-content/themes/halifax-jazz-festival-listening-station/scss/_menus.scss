@@ -14,16 +14,16 @@
 	display: block;
 }
 
-.main-navigation li {
+.main-navigation li.artists {
 	width: 100%;
-	background: $sidebar-color url(images/artists-icon.png) no-repeat center;
+	background: $sidebar-color url(images/artists-icon-white.png) no-repeat center;
 
-		&:hover, &:focus{
+		&:hover, &:active{
 			background: $mid-grey url(images/artists-icon.png) no-repeat center;
 
 			&:after, &:before {
 				left: 100%;
-				top: 86.5%;
+				bottom:0;
 				border: solid transparent;
 				content: " ";
 				height: 0;
@@ -50,12 +50,48 @@
 		}
 }
 
-.main-navigation li.current-menu-item {
+.artists_current_menu_item {
 	background: $mid-grey url(images/artists-icon.png) no-repeat center;
+	
+	&:after, &:before {
+		left: 100%;
+		bottom:0;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	&:after {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 22px 0 0 20px;
+		border-color: $mid-grey-transp $mid-grey-transp $mid-grey-transp $mid-grey;
+	}
+
+	&:before {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 22px 0 0 20px;
+		border-color: $mid-grey-transp $mid-grey-transp $mid-grey-transp $mid-grey;
+	}
+}
+
+.main-navigation li.survey {
+	background: $sidebar-color url(images/survey-icon-white.png) no-repeat center;
+	width: 100%;
+		
+		&:hover, &:active {
+			background: $mid-grey url(images/survey-icon-hover.png) no-repeat center;
 
 		&:after, &:before {
 				left: 100%;
-				top: 86.5%;
+				//top: 79%;
+				bottom: 0;
 				border: solid transparent;
 				content: " ";
 				height: 0;
@@ -79,20 +115,39 @@
 			border-width: 22px 0 0 20px;
 			border-color: $mid-grey-transp $mid-grey-transp $mid-grey-transp $mid-grey;;
 		}
+	}
 }
 
+.survey_current_menu_item{
+		background: $mid-grey url(images/survey-icon-hover.png) no-repeat center;
 
-.main-navigation li.survey{
-	width: 100%;
-	background: url(images/survey-icon.png) no-repeat center;
+		&:after, &:before {
+				left: 100%;
+				bottom: 0;
+				//top: 79%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+			}
 
-	&:hover, &:focus, &:active {
-			background: $mid-grey url(images/survey-icon-hover.png) no-repeat center;
+		&:after {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 22px 0 0 20px;
+			border-color: $mid-grey-transp $mid-grey-transp $mid-grey-transp $mid-grey;
 		}
-}
 
-.main-navigation li.survey.current-menu-item {
-	background: $mid-grey url(images/survey-icon-hover.png) no-repeat center;
+		&:before {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 22px 0 0 20px;
+			border-color: $mid-grey-transp $mid-grey-transp $mid-grey-transp $mid-grey;;
+		}
 }
 
 .main-navigation a {

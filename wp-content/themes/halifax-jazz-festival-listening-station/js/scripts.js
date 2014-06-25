@@ -3,25 +3,23 @@ jQuery(function($){
 	$(".post-inner").wrap("<td>");
 
 
-	$(".survey-arrow").on("click", function(e){
+	$(".artist-info").on("click", function(e){
 		e.preventDefault();
 		$(this).parent().next().css("display", "block");
 	});
-	$("img.close").on("click", function(e){
-		e.preventDefault();
+	$(".close-btn").on("click", function(){
 		$(".artist-bio").css("display", "none");
 	});
 
-	$(".various").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
+	$('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}, 
+			overlay: {
+     			 locked: false
+    			}
+		}
 	});
 });
 

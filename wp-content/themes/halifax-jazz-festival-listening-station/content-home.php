@@ -17,7 +17,7 @@
                 </a>
 		</h1>
 		<h2 class="home">Listening Booth</h2>
-		<a href="http://tdjazzfest.impactworkshop.ca/artists">
+		<a href="javascript:this.location = '/artists'">
 		<button class="home">Start</button></a>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

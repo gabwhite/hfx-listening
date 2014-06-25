@@ -110,6 +110,8 @@ function halifax_jazz_festival_listening_station_scripts() {
 
 	wp_enqueue_script("fancybox", get_template_directory_uri()."/js/fancybox/source/jquery.fancybox.pack.js", array("jquery"));
 
+	wp_enqueue_script("fancybox-helper", get_template_directory_uri()."/js/fancybox/source/helpers/jquery.fancybox-media.js", array("jquery"));
+
 	wp_enqueue_script("scripts", get_template_directory_uri()."/js/scripts.js", array("jquery"));
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

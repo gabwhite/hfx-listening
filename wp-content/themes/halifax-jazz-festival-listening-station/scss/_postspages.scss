@@ -6,7 +6,7 @@ img.home-tent {
 	margin: 0 auto;
 	display: block;
 	padding-left: 10%;
-	margin-bottom: 2%;
+	padding-right: 5%;
 	}
 
 article.home {
@@ -16,7 +16,7 @@ article.home {
 .home h2 {
 	@include h1;
 	text-align: center;
-	margin: 3% auto;
+	margin: 1% auto;
 	margin-bottom: 8%;
 }
 
@@ -33,6 +33,7 @@ article.home {
 
 article.page {
 	width: 100%;
+	height: 100%;
 }
 
 /*-----  End of Survey  ------*/
@@ -44,8 +45,6 @@ article.page {
 
 h2.entry-title {
 	@include h2-artist-name;
-	font-size: 4rem;
-	line-height: 5rem;
 	border-bottom: 7px solid white;
 	padding-bottom: 10%;
 }
@@ -60,26 +59,53 @@ h2.entry-title {
 
 	h2 {
 		@include h2-artist-name;
-		font-size: 4rem;
-		line-height: 4.5rem;
-		margin-bottom: 10%;
+		margin-bottom: 5%;
 	}
 }
 
-td .artist:nth-of-type(3) h2{
-	color: $pink;
-}
-
-td .artist:nth-of-type(4) h2 {
+td:nth-of-type(3n+1) .artist h2, td:nth-of-type(3n+1) .artist h4{
 	color: $green;
 }
 
+td:nth-of-type(3n+2) .artist h2, td:nth-of-type(3n+2) .artist h4{
+	color: $pink;
+}
+
+td:nth-of-type(3n+3) .artist h2, td:nth-of-type(3n+3) .artist h4{
+	color: $blue;
+}
+
+td:nth-of-type(3n+1) .entry-footer{
+	background: $green;
+}
+
+td:nth-of-type(3n+2) .entry-footer{
+	background: $pink;
+}
+
+td:nth-of-type(3n+3) .entry-footer{
+	background: $blue;
+}
+
+td:nth-of-type(2n+1){
+	background: $dark-blue;
+}
+
+td:nth-of-type(2n+2) {
+	background: $darkest-blue;
+}
+
 article {
-	width: 100%;
+	width: 24750px;
+	height: 748px;
+	overflow: hidden;
 }
 
 td {
-	vertical-align: top;
+	float: left;
+	position: relative;
+	display: block;
+	height: 748px;
 }
 
 .artistimg {
@@ -93,6 +119,7 @@ img.attachment-large {
 
 .artist-text {
 	margin: 5%;
+	padding-bottom: 20%;
 
 	p {
 		font-style: italic;
@@ -126,12 +153,20 @@ img.attachment-large {
 	}
 }
 
+.scrolly {
+	overflow-y: scroll;
+	height: 88%;
+}
+
+
 .close-btn {
 	position: absolute; 	
 	width: 450px;
 	bottom: 0;
 	background: $mid-grey;
 	float: right;
+	padding: 1%;
+	cursor: pointer;
 
 	p, img {
 		float: right;
@@ -140,6 +175,8 @@ img.attachment-large {
 
 	img {
 		margin-right: 5%;
+		width: 35px;
+		margin-right: 5%;
 	}
 
 	p {
@@ -147,14 +184,31 @@ img.attachment-large {
 		text-transform: uppercase;
 		color: $such-grey;
 		font-weight: 700;
-		padding: 5% 0 4% 0;
-		margin-left: 74%;
+		padding: 3.5% 0 4% 0;
+		margin-left: 75%;
 		margin-right: 0;
 	}
 }
 
 
 /*-----  End of Artists Page  ------*/
+
+/*==========  Survey Ad Page  ==========*/
+
+.artist.ad {
+	h2 {
+		margin: 30% 10% 0 10%;
+		padding-bottom: 5%;
+		border-bottom: 3px solid;
+	}
+	p {
+		font-style: italic;
+		margin: 10% 10% 0 10%;
+	}
+}
+
+
+
 .sticky {
 }
 .hentry {

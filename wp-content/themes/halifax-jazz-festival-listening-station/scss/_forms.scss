@@ -293,7 +293,7 @@ input[type="radio"]{
 	margin: 5% 0;
 }
 
-@media screen and (min-width: 765px){
+@media screen and (min-width: 768px){
 	.gform_wrapper .custom-input .gfield_radio li label{
 		margin: 2% 0;
 	}
@@ -354,7 +354,7 @@ input[type="checkbox"]{
 		margin: 5% 0;
 	}
 
-	@media screen and (max-width: 765px){
+	@media screen and (min-width: 768px){
 		.gform_wrapper .custom-input .gfield_checkbox li label{
 			margin: 2% 0;
 		}

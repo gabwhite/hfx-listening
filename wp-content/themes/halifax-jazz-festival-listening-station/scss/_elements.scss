@@ -53,15 +53,29 @@ th {
 	width: 450px;
 	bottom: 0;
 	background: $green;
-	border: 1px solid $blue;
-
 
 	.footer-icon { 
 		float: left;
+		width: 80%;
 
 		img {
 			float: left;
 			display: inline-block;
+			margin: 0;
+			
+		}
+
+		p {
+			margin: 6% auto;
+		}
+	}
+
+	.artist-info, .survey-arrow {
+		img {
+			float: left;
+			display: inline-block;
+			margin: 0;
+
 		}
 	}
 
@@ -69,10 +83,10 @@ th {
 		float: left;
 		display: inline-block;
 		@include p;
-		padding-top: 5%;
+		padding-top: 6%;
 	}
 
-	.survey-arrow {
+	.artist-info, .survey-arrow {
 		float: right;
 		border-left: 2px dotted white;
 	}

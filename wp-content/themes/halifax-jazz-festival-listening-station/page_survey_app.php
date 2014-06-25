@@ -1,8 +1,8 @@
 
 <!-- /**
- * Template Name: Home 
+ * Template Name: Survey App
  *
- * Displays the Home page/start screen of the site
+ * Displays the survey page/
  *
  * @package Halifax Jazz Festival - Listening Station
  */ -->
@@ -29,12 +29,33 @@
 <?php wp_head(); ?>
 </head>
 
+<body <?php body_class(); ?>>
+<div id="page" class="hfeed site">
+	
+
+	<header id="masthead" class="site-header" role="banner">
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'halifax-jazz-festival-listening-station' ); ?></button>
+			<ul class="menu nav-menu">
+				<li class="artists"><a href="javascript:this.location = '/artists'">Artists</a>
+				</li>
+				<li class="survey_current_menu_item"><a href="javascript:this.location = '/survey'">Survey</a>
+				</li>
+			</ul>
+		</nav><!-- #site-navigation -->
+
+		<div class="paint-image"></div>
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'home' ); ?>
+				<?php get_template_part( 'content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
